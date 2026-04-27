@@ -23,6 +23,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            overflow: hidden;
         }
 
         .penguins {
@@ -30,12 +31,13 @@
             border-radius: 50%;
             border: 1px solid #666;
             box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            filter: sepia(0.5) brightness(1.1);
         }
 
         .field-container {
             width: 280px;
             height: 180px;
-            border: 15px solid white;
+            border: 10px solid white;
             outline: 1px solid #333;
             background: url('football_field.jpg') no-repeat center/cover;
             position: relative;
@@ -43,24 +45,32 @@
 
         .tic-tac-toe-layer {
             position: absolute;
-            top: -15px; left: -15px;
-            width: calc(100% + 30px);
-            height: calc(100% + 30px);
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: url('tic-tac-toe.png') no-repeat center/contain;
         }
 
         .dino {
-            filter: hue-rotate(240deg) drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
-            width: 220px;
+            filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
+            width: 200px;
         }
 
-        .seagull {
-            box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+        .bird-box {
+            background-color: #b0c4de;
             width: 280px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+        }
+
+        .bird-box img {
+            width: 240px;
         }
 
         .butterfly {
-            filter: hue-rotate(200deg);
+            filter: invert(1);
             width: 280px;
             border-top-left-radius: 80px;
             border-bottom-right-radius: 80px;
@@ -103,7 +113,9 @@
     </div>
 
     <div class="project">
-        <img src="seagull.png" class="seagull">
+        <div class="bird-box">
+            <img src="seagull.png">
+        </div>
     </div>
 
     <div class="project">
