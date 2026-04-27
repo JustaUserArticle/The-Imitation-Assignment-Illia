@@ -69,13 +69,18 @@
             width: 240px;
         }
 
-        .butterfly {
-            filter: invert(1);
-            width: 280px;
-            border-top-left-radius: 80px;
-            border-bottom-right-radius: 80px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+         .butterfly-box {
+            perspective: 1000px;
+            display: inline-block;
+            margin: 50px;
+          }
+
+          .styled-butterfly {
+            width: 400px;
+  
+            filter: hue-rotate(200deg) saturate(1.5);
+            box-shadow: 0 50px 30px rgba(0, 0, 0, 0.3);
+          }
 
         .theater-box {
             width: 280px;
