@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Imitation Assignment</title>
+    <style>
+        body {
+            background-color: #e9e9e9;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            justify-content: center;
+        }
+
+        .project {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: 320px;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .penguins {
+            width: 280px;
+            border-radius: 50%;
+            border: 1px solid #666;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .field-container {
+            width: 280px;
+            height: 180px;
+            border: 15px solid white;
+            outline: 1px solid #333;
+            background: url('football_field.jpg') no-repeat center/cover;
+            position: relative;
+        }
+
+        .tic-tac-toe-layer {
+            position: absolute;
+            top: -15px; left: -15px;
+            width: calc(100% + 30px);
+            height: calc(100% + 30px);
+            background: url('tic-tac-toe.png') no-repeat center/contain;
+        }
+
+        .dino {
+            filter: hue-rotate(240deg) drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
+            width: 220px;
+        }
+
+        .seagull {
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+            width: 280px;
+        }
+
+        .butterfly {
+            filter: hue-rotate(200deg);
+            width: 280px;
+            border-top-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .theater-box {
+            width: 280px;
+            height: 180px;
+            border: 8px solid #222;
+            background: url('theater_stage.jpg') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theater-box span {
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px black;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="project">
+        <img src="penguins.jpg" class="penguins">
+    </div>
+
+    <div class="project">
+        <div class="field-container">
+            <div class="tic-tac-toe-layer"></div>
+        </div>
+    </div>
+
+    <div class="project">
+        <img src="dinosaur.png" class="dino">
+    </div>
+
+    <div class="project">
+        <img src="seagull.png" class="seagull">
+    </div>
+
+    <div class="project">
+        <img src="butterfly.jpg" class="butterfly">
+    </div>
+
+    <div class="project">
+        <div class="theater-box">
+            <span>Presenting</span>
+        </div>
+    </div>
+
+</body>
+</html>
