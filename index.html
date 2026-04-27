@@ -27,55 +27,81 @@
 
         .penguins {
             width: 280px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #999;
+            filter: sepia(0.3) brightness(1.1);
+        }
+
+        .field-border {
+            width: 280px;
+            height: 180px;
+            border: 20px solid white;
+            border-image: url('tic-tac-toe.png') 33% round;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
         }
 
         .field-container {
-            width: 280px;
-            height: 180px;
+            width: 100%;
+            height: 100%;
             background: url('football_field.jpg') no-repeat center/cover;
-            filter: grayscale(1); 
-            position: relative;
-        }
-
-        .tic-tac-toe-layer {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: url('tic-tac-toe.png') no-repeat center/contain;
+            filter: grayscale(1) brightness(0.7);
         }
 
         .dino {
             width: 200px;
-            filter: hue-rotate(200deg);
+            filter: hue-rotate(200deg) drop-shadow(10px 10px 5px rgba(0,0,0,0.4));
         }
 
-        .bird {
+        .bird-box {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #b0c4de, #ffffff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bird-box img {
             width: 240px;
-            transform: scaleX(-1);
+            filter: drop-shadow(0 10px 5px rgba(0,0,0,0.2));
         }
 
-        .butterfly {
-            width: 260px;
-            filter: invert(1);
+        .butterfly-box {
+            width: 280px;
+            height: 180px;
+            border-radius: 60px 0 60px 0;
+            overflow: hidden;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .butterfly-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: hue-rotate(180deg) saturate(1.5);
         }
 
         .theater-box {
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, #cc0000 0%, #440000 100%);
+            background: url('theater_stage.jpg') no-repeat center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 10px solid #222;
+            border: 5px solid #222;
         }
 
         .theater-box span {
             color: white;
             font-size: 26px;
-            font-family: sans-serif;
             font-weight: bold;
-            text-shadow: 2px 2px 10px black;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 8px black;
         }
     </style>
 </head>
@@ -86,8 +112,8 @@
     </div>
 
     <div class="project">
-        <div class="field-container">
-            <div class="tic-tac-toe-layer"></div>
+        <div class="field-border">
+            <div class="field-container"></div>
         </div>
     </div>
 
@@ -96,11 +122,15 @@
     </div>
 
     <div class="project">
-        <img src="seagull.png" class="bird">
+        <div class="bird-box">
+            <img src="seagull.png">
+        </div>
     </div>
 
     <div class="project">
-        <img src="butterfly.jpg" class="butterfly">
+        <div class="butterfly-box">
+            <img src="butterfly.jpg">
+        </div>
     </div>
 
     <div class="project">
